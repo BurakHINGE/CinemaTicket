@@ -1,0 +1,95 @@
+import java.util.Scanner;
+
+public class CinemaTicket {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        char[][] seats = {{' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',},
+                        {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', },
+                        {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', },
+                        {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', },
+                        {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', },
+                        {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', },
+                        {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', },
+                        {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', },
+                        {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', },
+                        {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', }};
+        
+        int seatCount = 100;
+        int seatRow = 10;
+        int seatColumn = 10;
+
+        while (seatCount >= 0) {
+            System.out.println("Welcome");
+            printSeats(seats);
+            System.out.println("How many tickets would you like to buy: ");
+            int requestCount = input.nextInt();
+
+            while (seatCount < requestCount) {
+                System.out.println("Unfortunately, there are not that many available seats left. Available seats: " + seatCount);
+                printSeats(seats);
+                System.out.println("How many tickets would you like to buy: ");
+                requestCount = input.nextInt();
+            }
+
+            input.nextLine();
+
+            for (int i = 0; i < requestCount; i++) {
+                System.out.println("Please select the row and column of your desired seat (e.g., C 5): ");
+                String inputString = input.nextLine().toUpperCase();
+
+                String[] parts = inputString.split(" ");
+
+                char rowChar = parts[0].charAt(0);
+                int col = Integer.parseInt(parts[1]);
+            
+                int row = rowChar - 'A';
+                int column = col - 1;
+
+                if (seats[row][column] == ' ') {
+                    seats[row][column] = 'X';
+                    seatCount--;
+                    System.out.println("Seat successfully reserved.");
+                    printSeats(seats);
+                }
+                else {
+                    System.out.println("Unfortunately, this seat is already taken. Please choose another seat.");
+                    printSeats(seats);
+                }
+            }
+
+            if (seatCount == 0) {
+                System.out.println("There are no more available seats.");
+                printSeats(seats);
+                break;
+            }
+        }
+        input.close();
+    }
+
+    public static void printSeats(char[][] array) {
+
+        System.out.print("  ");
+        for (int i = 1; i < 11; i++) {
+            System.out.print(i + "|");
+        }
+
+        System.out.println();
+        System.out.println("-----------------------");
+
+        for (int i = 'A'; i < 'K'; i++) {
+            System.out.print((char) i);
+
+            for (int j = 0; j < 10; j++) {
+                System.out.print("|" + array[i - 'A'][j]);
+
+                if (j == 9) {
+                    System.out.println("|");
+                }
+            }
+
+            System.out.println("-----------------------");
+        }
+    }
+}
