@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class CinemaTicket {
+public class tr_CinemaTicket {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
