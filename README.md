@@ -5,14 +5,14 @@
 ---
 
 ## 📌 Sürüm Bilgisi | Version Info  
- ● Current Version: 1.0.0  
- ● Geçerli Sürüm: 1.0.0  
+ ● Current Version: 1.1.0  
+ ● Geçerli Sürüm: 1.1.0  
 
 ---
 
 | Language / Dil | Status / Durum |
 |---------------|----------------|
-| English | Coming Soon |
+| English | ✅ |
 | Türkçe | ✅ |
 
 ---
@@ -79,4 +79,5 @@ Sistem, dolu koltukların tekrar seçilmesini engeller ve her rezervasyon sonras
 
 | Version | Date       | Description |
 |--------:|------------|-------------|
-| v1.0.0  | 2026-01-06 | Initial release – Basic 2D array-based cinema ticket reservation system implemented. / İlk sürüm – 2D array tabanlı temel sinema rezervasyon sistemi geliştirildi. |
+| v1.1.0  | 2026-02-27 | English version has been created / İngilizce sürüm oluşturuldu |
+| v1.0.0  | 2026-01-06 | Initial release – Basic 2D array-based cinema ticket reservation system implemented / İlk sürüm – 2D array tabanlı temel sinema rezervasyon sistemi geliştirildi |
