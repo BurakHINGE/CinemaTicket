@@ -81,3 +81,9 @@ Sistem, dolu koltukların tekrar seçilmesini engeller ve her rezervasyon sonras
 |--------:|------------|-------------|
 | v1.1.0  | 2026-02-27 | English version has been created / İngilizce sürüm oluşturuldu |
 | v1.0.0  | 2026-01-06 | Initial release – Basic 2D array-based cinema ticket reservation system implemented / İlk sürüm – 2D array tabanlı temel sinema rezervasyon sistemi geliştirildi |
+
+---
+
+### 📄 License | Lisans
+This project is licensed under the [MIT License](LICENSE).  
+Bu proje [MIT License](LICENSE) ile lisanslanmıştır.
